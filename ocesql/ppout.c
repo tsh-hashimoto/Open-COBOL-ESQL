@@ -34,6 +34,8 @@ int lineNUM = 0;
 int japflg = 0;
 int charcount = 0;
 
+extern int flag_quiet;
+
 char *SQcount(int i){
 	char NUM[4];
 	NUM[0] = '0';
@@ -2322,5 +2324,7 @@ FILE* fopen_or_die(char *filename, const char *mode){
 }
 
 void _printlog(char *msg){
-	printmsg("%s\n", msg);
+	if (!flag_quiet) {
+		printmsg("%s\n", msg);
+	}
 }
