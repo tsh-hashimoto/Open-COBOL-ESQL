@@ -1,4 +1,4 @@
-AT_SETUP([quiet-option-test])
+AT_SETUP([quiet option test])
 
 AT_DATA([prog1.cbl], [
         IDENTIFICATION      DIVISION.
@@ -36,16 +36,10 @@ AT_DATA([prog1.cbl], [
             STOP RUN.
 ])
 
-AT_CHECK([ocesql prog1.cbl prog1.cob], [0], 
-[
-  precompile start: prog1.cbl
-  =======================================================
-                LIST OF CALLED DB Library API            
-  =======================================================
-  Generate:OCESQLConnect
-  Generate:OCESQLDisconnect
-  =======================================================
-])
+AT_CHECK([printf "precompile start: prog1.cbl\n=======================================================\n              LIST OF CALLED DB Library API            \n=======================================================\nGenerate:OCESQLConnect\nGenerate:OCESQLDisconnect\n=======================================================\n" > expected_output.txt])
+AT_CHECK([ocesql prog1.cbl prog1.cob > output.txt], [0])
+AT_CHECK([diff expected_output.txt output.txt], [0])
+
 AT_CHECK([ocesql -q prog1.cbl prog1.cob], [0])
 AT_CHECK([ocesql --quiet prog1.cbl prog1.cob], [0])
 
@@ -54,27 +48,17 @@ AT_DATA([prog2.cbl], [
         PROGRAM-ID.         prog.
         DATA                DIVISION.
         WORKING-STORAGE     SECTION.
-
         PROCEDURE           DIVISION.
         MAIN-RTN.
-
             DISPLAY "HELLO, WORLD".
-
             STOP RUN.
 ])
 
-AT_CHECK([ocesql prog2.cbl prog2.cob], [0], 
-[
-  precompile start: prog2.cbl
-  =======================================================
-                LIST OF CALLED DB Library API            
-  =======================================================
-  =======================================================
-])
+AT_CHECK([ocesql prog2.cbl prog2.cob > /dev/null], [0])
 AT_CHECK([ocesql -q prog2.cbl prog2.cob], [0])
-AT_CHECK([diff prog2.cbl prog2.cob])
+AT_CHECK([diff prog2.cbl prog2.cob], [0])
 AT_CHECK([ocesql --quiet prog2.cbl prog2.cob], [0])
-AT_CHECK([diff prog2.cbl prog2.cob])
+AT_CHECK([diff prog2.cbl prog2.cob], [0])
 
 AT_DATA([prog3.cbl], [
         IDENTIFICATION      DIVISION.
@@ -102,7 +86,7 @@ AT_DATA([prog3.cbl], [
               TO PASSWD.
         
             EXEC SQL
-                  CONNECT :USERNAME IDENTIFIED BY :PASSWD USING :DBNAME
+                    CONNECT :USERNAME IDENTIFIED BY :PASSWD USING :DBNAME
             END-EXEC.
 
             EXEC SQL
@@ -112,8 +96,8 @@ AT_DATA([prog3.cbl], [
             STOP RUN.
 ])
 
-AT_CHECK([ocesql prog3.cbl prog3.cob | grep "translate error"], [0], [translate error])
-AT_CHECK([ocesql -q prog3.cbl prog3.cob | grep "translate error"], [0], [translate error])
-AT_CHECK([ocesql --quiet prog3.cbl prog3.cob | grep "translate error"], [0], [translate error])
+AT_CHECK([ocesql prog3.cbl prog3.cob | grep "translate error" > /dev/null], [0])
+AT_CHECK([ocesql -q prog3.cbl prog3.cob | grep "translate error" > /dev/null], [0])
+AT_CHECK([ocesql --quiet prog3.cbl prog3.cob | grep "translate error" > /dev/null], [0])
 
 AT_CLEANUP
