@@ -118,7 +118,7 @@ jobs:
           cp ../.github/workflows/test-settings/embed_db_info.sh embed_db_info.sh
           cp ../.github/workflows/test-settings/cobol_runner.sh cobol_runner.sh
           make
-          ./basic || cat basic.dir/*/*.log
+          ./basic
           ./cobol_data
           ./sql_data
           ./sqlca
