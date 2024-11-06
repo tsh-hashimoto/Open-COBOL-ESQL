@@ -638,7 +638,7 @@ at_fn_validate_ranges ()
   do
     eval at_value=\$$at_grp
     if test $at_value -lt 1 || test $at_value -gt 14; then
-      $as_echo "invalid test group: $at_value" >&2
+      printf "%s\n" "invalid test group: $at_value" >&2
       exit 1
     fi
     case $at_value in
@@ -2619,16 +2619,16 @@ cat >prog.cbl <<'_ATEOF'
       ******************************************************************
        WORKING-STORAGE             SECTION.
        01  TEST-DATA.
-         03 FILLER       PIC X(28) VALUE "0001ï¿½kï¿½Cï¿½@ï¿½ï¿½ï¿½Y          0400".
-         03 FILLER       PIC X(28) VALUE "0002ï¿½ÂXï¿½@ï¿½ï¿½ï¿½Y          0350".
-         03 FILLER       PIC X(28) VALUE "0003ï¿½Hï¿½cï¿½@ï¿½Oï¿½Y          0300".
-         03 FILLER       PIC X(28) VALUE "0004ï¿½ï¿½ï¿½@ï¿½lï¿½Y          025p".
-         03 FILLER       PIC X(28) VALUE "0005ï¿½{ï¿½ï¿½@ï¿½Ü˜Y          020p".
-         03 FILLER       PIC X(28) VALUE "0006ï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½Zï¿½Y          0150".
-         03 FILLER       PIC X(28) VALUE "0007ï¿½È–Ø@ï¿½ï¿½ï¿½Y          010p".
-         03 FILLER       PIC X(28) VALUE "0008ï¿½ï¿½ï¿½@ï¿½ï¿½ï¿½Y          0050".
-         03 FILLER       PIC X(28) VALUE "0009ï¿½Qï¿½nï¿½@ï¿½ï¿½Y          020p".
-         03 FILLER       PIC X(28) VALUE "0010ï¿½ï¿½Ê@ï¿½\ï¿½Y          0350".
+         03 FILLER       PIC X(28) VALUE "0001AAAAA               0400".
+         03 FILLER       PIC X(28) VALUE "0002BBBBB               0350".
+         03 FILLER       PIC X(28) VALUE "0003CCCCC               0300".
+         03 FILLER       PIC X(28) VALUE "0004DDDDD               025p".
+         03 FILLER       PIC X(28) VALUE "0005EEEEE               020p".
+         03 FILLER       PIC X(28) VALUE "0006FFFFF               0150".
+         03 FILLER       PIC X(28) VALUE "0007GGGGG               010p".
+         03 FILLER       PIC X(28) VALUE "0008HHHHH               0050".
+         03 FILLER       PIC X(28) VALUE "0009IIIII               020p".
+         03 FILLER       PIC X(28) VALUE "0010JJJJJ               0350".
 
        01  TEST-DATA-R   REDEFINES TEST-DATA.
          03  TEST-TBL    OCCURS  10.
@@ -2841,16 +2841,16 @@ cat >prog.cbl <<'_ATEOF'
       ******************************************************************
        WORKING-STORAGE             SECTION.
        01  TEST-DATA.
-         03 FILLER       PIC X(28) VALUE "0001ï¿½kï¿½Cï¿½@ï¿½ï¿½ï¿½Y          0400".
-         03 FILLER       PIC X(28) VALUE "0002ï¿½ÂXï¿½@ï¿½ï¿½ï¿½Y          0350".
-         03 FILLER       PIC X(28) VALUE "0003ï¿½Hï¿½cï¿½@ï¿½Oï¿½Y          0300".
-         03 FILLER       PIC X(28) VALUE "0004ï¿½ï¿½ï¿½@ï¿½lï¿½Y          025p".
-         03 FILLER       PIC X(28) VALUE "0005ï¿½{ï¿½ï¿½@ï¿½Ü˜Y          020p".
-         03 FILLER       PIC X(28) VALUE "0006ï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½Zï¿½Y          0150".
-         03 FILLER       PIC X(28) VALUE "0007ï¿½È–Ø@ï¿½ï¿½ï¿½Y          010p".
-         03 FILLER       PIC X(28) VALUE "0008ï¿½ï¿½ï¿½@ï¿½ï¿½ï¿½Y          0050".
-         03 FILLER       PIC X(28) VALUE "0009ï¿½Qï¿½nï¿½@ï¿½ï¿½Y          020p".
-         03 FILLER       PIC X(28) VALUE "0010ï¿½ï¿½Ê@ï¿½\ï¿½Y          0350".
+         03 FILLER       PIC X(28) VALUE "0001AAAAA               0400".
+         03 FILLER       PIC X(28) VALUE "0002BBBBB               0350".
+         03 FILLER       PIC X(28) VALUE "0003CCCCC               0300".
+         03 FILLER       PIC X(28) VALUE "0004DDDDD               025p".
+         03 FILLER       PIC X(28) VALUE "0005EEEEE               020p".
+         03 FILLER       PIC X(28) VALUE "0006FFFFF               0150".
+         03 FILLER       PIC X(28) VALUE "0007GGGGG               010p".
+         03 FILLER       PIC X(28) VALUE "0008HHHHH               0050".
+         03 FILLER       PIC X(28) VALUE "0009IIIII               020p".
+         03 FILLER       PIC X(28) VALUE "0010JJJJJ               0350".
 
        01  TEST-DATA-R   REDEFINES TEST-DATA.
          03  TEST-TBL    OCCURS  10.
@@ -3063,16 +3063,16 @@ cat >prog.cbl <<'_ATEOF'
       ******************************************************************
        WORKING-STORAGE             SECTION.
        01  TEST-DATA.
-         03 FILLER       PIC X(28) VALUE "0001ï¿½kï¿½Cï¿½@ï¿½ï¿½ï¿½Y          0400".
-         03 FILLER       PIC X(28) VALUE "0002ï¿½ÂXï¿½@ï¿½ï¿½ï¿½Y          0350".
-         03 FILLER       PIC X(28) VALUE "0003ï¿½Hï¿½cï¿½@ï¿½Oï¿½Y          0300".
-         03 FILLER       PIC X(28) VALUE "0004ï¿½ï¿½ï¿½@ï¿½lï¿½Y          025p".
-         03 FILLER       PIC X(28) VALUE "0005ï¿½{ï¿½ï¿½@ï¿½Ü˜Y          020p".
-         03 FILLER       PIC X(28) VALUE "0006ï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½Zï¿½Y          0150".
-         03 FILLER       PIC X(28) VALUE "0007ï¿½È–Ø@ï¿½ï¿½ï¿½Y          010p".
-         03 FILLER       PIC X(28) VALUE "0008ï¿½ï¿½ï¿½@ï¿½ï¿½ï¿½Y          0050".
-         03 FILLER       PIC X(28) VALUE "0009ï¿½Qï¿½nï¿½@ï¿½ï¿½Y          020p".
-         03 FILLER       PIC X(28) VALUE "0010ï¿½ï¿½Ê@ï¿½\ï¿½Y          0350".
+         03 FILLER       PIC X(28) VALUE "0001–kŠC@‘¾˜Y          0400".
+         03 FILLER       PIC X(28) VALUE "0002ÂX@Ÿ˜Y          0350".
+         03 FILLER       PIC X(28) VALUE "0003H“c@O˜Y          0300".
+         03 FILLER       PIC X(28) VALUE "0004Šâè@l˜Y          025p".
+         03 FILLER       PIC X(28) VALUE "0005‹{é@ŒÜ˜Y          020p".
+         03 FILLER       PIC X(28) VALUE "0006•Ÿ“‡@˜Z˜Y          0150".
+         03 FILLER       PIC X(28) VALUE "0007“È–Ø@µ˜Y          010p".
+         03 FILLER       PIC X(28) VALUE "0008ˆïé@”ª˜Y          0050".
+         03 FILLER       PIC X(28) VALUE "0009ŒQ”n@‹ã˜Y          020p".
+         03 FILLER       PIC X(28) VALUE "0010é‹Ê@\˜Y          0350".
 
        01  TEST-DATA-R   REDEFINES TEST-DATA.
          03  TEST-TBL    OCCURS  10.
@@ -3268,16 +3268,16 @@ at_fn_check_prepare_notrace 'a ${...} parameter expansion' "fetch.at:172"
 at_status=$? at_failed=false
 $at_check_filter
 at_fn_diff_devnull "$at_stderr" || at_failed=:
-echo >>"$at_stdout"; printf "%s\n" "+0001, ï¿½kï¿½Cï¿½@ï¿½ï¿½ï¿½Y          , +0400
-+0002, ï¿½ÂXï¿½@ï¿½ï¿½ï¿½Y          , +0350
-+0003, ï¿½Hï¿½cï¿½@ï¿½Oï¿½Y          , +0300
-+0004, ï¿½ï¿½ï¿½@ï¿½lï¿½Y          , -0250
-+0005, ï¿½{ï¿½ï¿½@ï¿½Ü˜Y          , -0200
-+0006, ï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½Zï¿½Y          , +0150
-+0007, ï¿½È–Ø@ï¿½ï¿½ï¿½Y          , -0100
-+0008, ï¿½ï¿½ï¿½@ï¿½ï¿½ï¿½Y          , +0050
-+0009, ï¿½Qï¿½nï¿½@ï¿½ï¿½Y          , -0200
-+0010, ï¿½ï¿½Ê@ï¿½\\ï¿½Y          , +0350
+echo >>"$at_stdout"; printf "%s\n" "+0001, –kŠC@‘¾˜Y          , +0400
++0002, ÂX@Ÿ˜Y          , +0350
++0003, H“c@O˜Y          , +0300
++0004, Šâè@l˜Y          , -0250
++0005, ‹{é@ŒÜ˜Y          , -0200
++0006, •Ÿ“‡@˜Z˜Y          , +0150
++0007, “È–Ø@µ˜Y          , -0100
++0008, ˆïé@”ª˜Y          , +0050
++0009, ŒQ”n@‹ã˜Y          , -0200
++0010, é‹Ê@\\˜Y          , +0350
 " | \
   $at_diff - "$at_stdout" || at_failed=:
 at_fn_check_status 0 $at_status "$at_srcdir/fetch.at:172"
@@ -3291,11 +3291,11 @@ $at_traceon; }
 read at_status <"$at_status_file"
 #AT_STOP_6
 #AT_START_7
-at_fn_group_banner 7 'delete.at:1' \
-  "delete statement test" "                          "
+at_fn_group_banner 7 'fetch.at:187' \
+  "fetch into occurs item" "                         "
 at_xfail=no
 (
-  $as_echo "7. $at_setup_line: testing $at_desc ..."
+  printf "%s\n" "7. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -3309,16 +3309,16 @@ cat >prog.cbl <<'_ATEOF'
       ******************************************************************
        WORKING-STORAGE             SECTION.
        01  TEST-DATA.
-         03 FILLER       PIC X(28) VALUE "0001ï¿½kï¿½Cï¿½@ï¿½ï¿½ï¿½Y          0400".
-         03 FILLER       PIC X(28) VALUE "0002ï¿½ÂXï¿½@ï¿½ï¿½ï¿½Y          0350".
-         03 FILLER       PIC X(28) VALUE "0003ï¿½Hï¿½cï¿½@ï¿½Oï¿½Y          0300".
-         03 FILLER       PIC X(28) VALUE "0004ï¿½ï¿½ï¿½@ï¿½lï¿½Y          025p".
-         03 FILLER       PIC X(28) VALUE "0005ï¿½{ï¿½ï¿½@ï¿½Ü˜Y          020p".
-         03 FILLER       PIC X(28) VALUE "0006ï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½Zï¿½Y          0150".
-         03 FILLER       PIC X(28) VALUE "0007ï¿½È–Ø@ï¿½ï¿½ï¿½Y          010p".
-         03 FILLER       PIC X(28) VALUE "0008ï¿½ï¿½ï¿½@ï¿½ï¿½ï¿½Y          0050".
-         03 FILLER       PIC X(28) VALUE "0009ï¿½Qï¿½nï¿½@ï¿½ï¿½Y          020p".
-         03 FILLER       PIC X(28) VALUE "0010ï¿½ï¿½Ê@ï¿½\ï¿½Y          0350".
+         03 FILLER       PIC X(28) VALUE "0001–kŠC@‘¾˜Y          0400".
+         03 FILLER       PIC X(28) VALUE "0002ÂX@Ÿ˜Y          0350".
+         03 FILLER       PIC X(28) VALUE "0003H“c@O˜Y          0300".
+         03 FILLER       PIC X(28) VALUE "0004Šâè@l˜Y          025p".
+         03 FILLER       PIC X(28) VALUE "0005‹{é@ŒÜ˜Y          020p".
+         03 FILLER       PIC X(28) VALUE "0006•Ÿ“‡@˜Z˜Y          0150".
+         03 FILLER       PIC X(28) VALUE "0007“È–Ø@µ˜Y          010p".
+         03 FILLER       PIC X(28) VALUE "0008ˆïé@”ª˜Y          0050".
+         03 FILLER       PIC X(28) VALUE "0009ŒQ”n@‹ã˜Y          020p".
+         03 FILLER       PIC X(28) VALUE "0010é‹Ê@\˜Y          0350".
 
        01  TEST-DATA-R   REDEFINES TEST-DATA.
          03  TEST-TBL    OCCURS  10.
@@ -3412,7 +3412,7 @@ cat >prog.cbl <<'_ATEOF'
            EXEC SQL
                OPEN C1
            END-EXEC.
-      *  ï¿½@FETCH CURSOR
+      *  @FETCH CURSOR
            MOVE SPACE TO OCCURS-EMP-REC.
            EXEC SQL
                FETCH C1 INTO :OCCURS-EMP-REC-VARS
@@ -3459,7 +3459,7 @@ cat >prog.cbl <<'_ATEOF'
 _ATEOF
 
 { set +x
-$as_echo "$at_srcdir/fetch.at:346: ocesql prog.cbl prog.cob > /dev/null"
+printf "%s\n" "$at_srcdir/fetch.at:346: ocesql prog.cbl prog.cob > /dev/null"
 at_fn_check_prepare_trace "fetch.at:346"
 ( $at_check_trace; ocesql prog.cbl prog.cob > /dev/null
 ) >>"$at_stdout" 2>>"$at_stderr" 5>&-
@@ -3472,7 +3472,7 @@ $at_failed && at_fn_log_failure
 $at_traceon; }
 
 { set +x
-$as_echo "$at_srcdir/fetch.at:347: \${EMBED_DB_INFO} prog.cob"
+printf "%s\n" "$at_srcdir/fetch.at:347: \${EMBED_DB_INFO} prog.cob"
 at_fn_check_prepare_notrace 'a ${...} parameter expansion' "fetch.at:347"
 ( $at_check_trace; ${EMBED_DB_INFO} prog.cob
 ) >>"$at_stdout" 2>>"$at_stderr" 5>&-
@@ -3485,7 +3485,7 @@ $at_failed && at_fn_log_failure
 $at_traceon; }
 
 { set +x
-$as_echo "$at_srcdir/fetch.at:348: \${COMPILE_MODULE} prog.cob"
+printf "%s\n" "$at_srcdir/fetch.at:348: \${COMPILE_MODULE} prog.cob"
 at_fn_check_prepare_notrace 'a ${...} parameter expansion' "fetch.at:348"
 ( $at_check_trace; ${COMPILE_MODULE} prog.cob
 ) >>"$at_stdout" 2>>"$at_stderr" 5>&-
@@ -3498,27 +3498,27 @@ $at_failed && at_fn_log_failure
 $at_traceon; }
 
 { set +x
-$as_echo "$at_srcdir/fetch.at:349: \${RUN_MODULE} prog 2> /dev/null"
+printf "%s\n" "$at_srcdir/fetch.at:349: \${RUN_MODULE} prog 2> /dev/null"
 at_fn_check_prepare_notrace 'a ${...} parameter expansion' "fetch.at:349"
 ( $at_check_trace; ${RUN_MODULE} prog 2> /dev/null
 ) >>"$at_stdout" 2>>"$at_stderr" 5>&-
 at_status=$? at_failed=false
 $at_check_filter
 at_fn_diff_devnull "$at_stderr" || at_failed=:
-echo >>"$at_stdout"; $as_echo "0003
-+0001, ï¿½kï¿½Cï¿½@ï¿½ï¿½ï¿½Y          , +0400
-+0002, ï¿½ÂXï¿½@ï¿½ï¿½ï¿½Y          , +0350
-+0003, ï¿½Hï¿½cï¿½@ï¿½Oï¿½Y          , +0300
+echo >>"$at_stdout"; printf "%s\n" "0003
++0001, –kŠC@‘¾˜Y          , +0400
++0002, ÂX@Ÿ˜Y          , +0350
++0003, H“c@O˜Y          , +0300
 0006
-+0004, ï¿½ï¿½ï¿½@ï¿½lï¿½Y          , -0250
-+0005, ï¿½{ï¿½ï¿½@ï¿½Ü˜Y          , -0200
-+0006, ï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½Zï¿½Y          , +0150
++0004, Šâè@l˜Y          , -0250
++0005, ‹{é@ŒÜ˜Y          , -0200
++0006, •Ÿ“‡@˜Z˜Y          , +0150
 0009
-+0007, ï¿½È–Ø@ï¿½ï¿½ï¿½Y          , -0100
-+0008, ï¿½ï¿½ï¿½@ï¿½ï¿½ï¿½Y          , +0050
-+0009, ï¿½Qï¿½nï¿½@ï¿½ï¿½Y          , -0200
++0007, “È–Ø@µ˜Y          , -0100
++0008, ˆïé@”ª˜Y          , +0050
++0009, ŒQ”n@‹ã˜Y          , -0200
 0010
-+0010, ï¿½ï¿½Ê@ï¿½\\ï¿½Y          , +0350
++0010, é‹Ê@\\˜Y          , +0350
 +0000,                     , +0000
 +0000,                     , +0000
 " | \
@@ -3538,7 +3538,7 @@ at_fn_group_banner 8 'fetch.at:370' \
   "fetch into multi record items" "                  "
 at_xfail=no
 (
-  $as_echo "8. $at_setup_line: testing $at_desc ..."
+  printf "%s\n" "8. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -3552,16 +3552,16 @@ cat >prog.cbl <<'_ATEOF'
       ******************************************************************
        WORKING-STORAGE             SECTION.
        01  TEST-DATA.
-         03 FILLER       PIC X(28) VALUE "0001ï¿½kï¿½Cï¿½@ï¿½ï¿½ï¿½Y          0400".
-         03 FILLER       PIC X(28) VALUE "0002ï¿½ÂXï¿½@ï¿½ï¿½ï¿½Y          0350".
-         03 FILLER       PIC X(28) VALUE "0003ï¿½Hï¿½cï¿½@ï¿½Oï¿½Y          0300".
-         03 FILLER       PIC X(28) VALUE "0004ï¿½ï¿½ï¿½@ï¿½lï¿½Y          025p".
-         03 FILLER       PIC X(28) VALUE "0005ï¿½{ï¿½ï¿½@ï¿½Ü˜Y          020p".
-         03 FILLER       PIC X(28) VALUE "0006ï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½Zï¿½Y          0150".
-         03 FILLER       PIC X(28) VALUE "0007ï¿½È–Ø@ï¿½ï¿½ï¿½Y          010p".
-         03 FILLER       PIC X(28) VALUE "0008ï¿½ï¿½ï¿½@ï¿½ï¿½ï¿½Y          0050".
-         03 FILLER       PIC X(28) VALUE "0009ï¿½Qï¿½nï¿½@ï¿½ï¿½Y          020p".
-         03 FILLER       PIC X(28) VALUE "0010ï¿½ï¿½Ê@ï¿½\ï¿½Y          0350".
+         03 FILLER       PIC X(28) VALUE "0001–kŠC@‘¾˜Y          0400".
+         03 FILLER       PIC X(28) VALUE "0002ÂX@Ÿ˜Y          0350".
+         03 FILLER       PIC X(28) VALUE "0003H“c@O˜Y          0300".
+         03 FILLER       PIC X(28) VALUE "0004Šâè@l˜Y          025p".
+         03 FILLER       PIC X(28) VALUE "0005‹{é@ŒÜ˜Y          020p".
+         03 FILLER       PIC X(28) VALUE "0006•Ÿ“‡@˜Z˜Y          0150".
+         03 FILLER       PIC X(28) VALUE "0007“È–Ø@µ˜Y          010p".
+         03 FILLER       PIC X(28) VALUE "0008ˆïé@”ª˜Y          0050".
+         03 FILLER       PIC X(28) VALUE "0009ŒQ”n@‹ã˜Y          020p".
+         03 FILLER       PIC X(28) VALUE "0010é‹Ê@\˜Y          0350".
 
        01  TEST-DATA-R   REDEFINES TEST-DATA.
          03  TEST-TBL    OCCURS  10.
@@ -3683,7 +3683,7 @@ cat >prog.cbl <<'_ATEOF'
 _ATEOF
 
 { set +x
-$as_echo "$at_srcdir/fetch.at:510: ocesql prog.cbl prog.cob > /dev/null"
+printf "%s\n" "$at_srcdir/fetch.at:510: ocesql prog.cbl prog.cob > /dev/null"
 at_fn_check_prepare_trace "fetch.at:510"
 ( $at_check_trace; ocesql prog.cbl prog.cob > /dev/null
 ) >>"$at_stdout" 2>>"$at_stderr" 5>&-
@@ -3696,7 +3696,7 @@ $at_failed && at_fn_log_failure
 $at_traceon; }
 
 { set +x
-$as_echo "$at_srcdir/fetch.at:511: \${EMBED_DB_INFO} prog.cob"
+printf "%s\n" "$at_srcdir/fetch.at:511: \${EMBED_DB_INFO} prog.cob"
 at_fn_check_prepare_notrace 'a ${...} parameter expansion' "fetch.at:511"
 ( $at_check_trace; ${EMBED_DB_INFO} prog.cob
 ) >>"$at_stdout" 2>>"$at_stderr" 5>&-
@@ -3709,7 +3709,7 @@ $at_failed && at_fn_log_failure
 $at_traceon; }
 
 { set +x
-$as_echo "$at_srcdir/fetch.at:512: \${COMPILE_MODULE} prog.cob"
+printf "%s\n" "$at_srcdir/fetch.at:512: \${COMPILE_MODULE} prog.cob"
 at_fn_check_prepare_notrace 'a ${...} parameter expansion' "fetch.at:512"
 ( $at_check_trace; ${COMPILE_MODULE} prog.cob
 ) >>"$at_stdout" 2>>"$at_stderr" 5>&-
@@ -3722,23 +3722,23 @@ $at_failed && at_fn_log_failure
 $at_traceon; }
 
 { set +x
-$as_echo "$at_srcdir/fetch.at:513: \${RUN_MODULE} prog 2> /dev/null"
+printf "%s\n" "$at_srcdir/fetch.at:513: \${RUN_MODULE} prog 2> /dev/null"
 at_fn_check_prepare_notrace 'a ${...} parameter expansion' "fetch.at:513"
 ( $at_check_trace; ${RUN_MODULE} prog 2> /dev/null
 ) >>"$at_stdout" 2>>"$at_stderr" 5>&-
 at_status=$? at_failed=false
 $at_check_filter
 at_fn_diff_devnull "$at_stderr" || at_failed=:
-echo >>"$at_stdout"; $as_echo "+0001, ï¿½kï¿½Cï¿½@ï¿½ï¿½ï¿½Y          , +0400
-+0002, ï¿½ÂXï¿½@ï¿½ï¿½ï¿½Y          , +0350
-+0003, ï¿½Hï¿½cï¿½@ï¿½Oï¿½Y          , +0300
-+0004, ï¿½ï¿½ï¿½@ï¿½lï¿½Y          , -0250
-+0005, ï¿½{ï¿½ï¿½@ï¿½Ü˜Y          , -0200
-+0006, ï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½Zï¿½Y          , +0150
-+0007, ï¿½È–Ø@ï¿½ï¿½ï¿½Y          , -0100
-+0008, ï¿½ï¿½ï¿½@ï¿½ï¿½ï¿½Y          , +0050
-+0009, ï¿½Qï¿½nï¿½@ï¿½ï¿½Y          , -0200
-+0010, ï¿½ï¿½Ê@ï¿½\\ï¿½Y          , +0350
+echo >>"$at_stdout"; printf "%s\n" "+0001, –kŠC@‘¾˜Y          , +0400
++0002, ÂX@Ÿ˜Y          , +0350
++0003, H“c@O˜Y          , +0300
++0004, Šâè@l˜Y          , -0250
++0005, ‹{é@ŒÜ˜Y          , -0200
++0006, •Ÿ“‡@˜Z˜Y          , +0150
++0007, “È–Ø@µ˜Y          , -0100
++0008, ˆïé@”ª˜Y          , +0050
++0009, ŒQ”n@‹ã˜Y          , -0200
++0010, é‹Ê@\\˜Y          , +0350
 " | \
   $at_diff - "$at_stdout" || at_failed=:
 at_fn_check_status 0 $at_status "$at_srcdir/fetch.at:513"
@@ -3756,7 +3756,7 @@ at_fn_group_banner 9 'delete.at:1' \
   "delete statement test" "                          "
 at_xfail=no
 (
-  $as_echo "9. $at_setup_line: testing $at_desc ..."
+  printf "%s\n" "9. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -3770,16 +3770,16 @@ cat >prog.cbl <<'_ATEOF'
       ******************************************************************
        WORKING-STORAGE             SECTION.
        01  TEST-DATA.
-         03 FILLER       PIC X(28) VALUE "0001ï¿½kï¿½Cï¿½@ï¿½ï¿½ï¿½Y          0400".
-         03 FILLER       PIC X(28) VALUE "0002ï¿½ÂXï¿½@ï¿½ï¿½ï¿½Y          0350".
-         03 FILLER       PIC X(28) VALUE "0003ï¿½Hï¿½cï¿½@ï¿½Oï¿½Y          0300".
-         03 FILLER       PIC X(28) VALUE "0004ï¿½ï¿½ï¿½@ï¿½lï¿½Y          025p".
-         03 FILLER       PIC X(28) VALUE "0005ï¿½{ï¿½ï¿½@ï¿½Ü˜Y          020p".
-         03 FILLER       PIC X(28) VALUE "0006ï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½Zï¿½Y          0150".
-         03 FILLER       PIC X(28) VALUE "0007ï¿½È–Ø@ï¿½ï¿½ï¿½Y          010p".
-         03 FILLER       PIC X(28) VALUE "0008ï¿½ï¿½ï¿½@ï¿½ï¿½ï¿½Y          0050".
-         03 FILLER       PIC X(28) VALUE "0009ï¿½Qï¿½nï¿½@ï¿½ï¿½Y          020p".
-         03 FILLER       PIC X(28) VALUE "0010ï¿½ï¿½Ê@ï¿½\ï¿½Y          0350".
+         03 FILLER       PIC X(28) VALUE "0001–kŠC@‘¾˜Y          0400".
+         03 FILLER       PIC X(28) VALUE "0002ÂX@Ÿ˜Y          0350".
+         03 FILLER       PIC X(28) VALUE "0003H“c@O˜Y          0300".
+         03 FILLER       PIC X(28) VALUE "0004Šâè@l˜Y          025p".
+         03 FILLER       PIC X(28) VALUE "0005‹{é@ŒÜ˜Y          020p".
+         03 FILLER       PIC X(28) VALUE "0006•Ÿ“‡@˜Z˜Y          0150".
+         03 FILLER       PIC X(28) VALUE "0007“È–Ø@µ˜Y          010p".
+         03 FILLER       PIC X(28) VALUE "0008ˆïé@”ª˜Y          0050".
+         03 FILLER       PIC X(28) VALUE "0009ŒQ”n@‹ã˜Y          020p".
+         03 FILLER       PIC X(28) VALUE "0010é‹Ê@\˜Y          0350".
 
        01  TEST-DATA-R   REDEFINES TEST-DATA.
          03  TEST-TBL    OCCURS  10.
@@ -3990,11 +3990,11 @@ $at_check_filter
 at_fn_diff_devnull "$at_stderr" || at_failed=:
 echo >>"$at_stdout"; printf "%s\n" "0001 <log> success test_return_code
 0002 <log> success test_return_code
-0003 <log> success fetch_record +0001, ï¿½kï¿½Cï¿½@ï¿½ï¿½ï¿½Y          , +0400
-0004 <log> success fetch_record +0002, ï¿½ÂXï¿½@ï¿½ï¿½ï¿½Y          , +0350
-0005 <log> success fetch_record +0003, ï¿½Hï¿½cï¿½@ï¿½Oï¿½Y          , +0300
-0006 <log> success fetch_record +0004, ï¿½ï¿½ï¿½@ï¿½lï¿½Y          , -0250
-0007 <log> success fetch_record +0005, ï¿½{ï¿½ï¿½@ï¿½Ü˜Y          , -0200
+0003 <log> success fetch_record +0001, –kŠC@‘¾˜Y          , +0400
+0004 <log> success fetch_record +0002, ÂX@Ÿ˜Y          , +0350
+0005 <log> success fetch_record +0003, H“c@O˜Y          , +0300
+0006 <log> success fetch_record +0004, Šâè@l˜Y          , -0250
+0007 <log> success fetch_record +0005, ‹{é@ŒÜ˜Y          , -0200
 " | \
   $at_diff - "$at_stdout" || at_failed=:
 at_fn_check_status 0 $at_status "$at_srcdir/delete.at:185"
@@ -4012,7 +4012,7 @@ at_fn_group_banner 10 'commit-rollback.at:1' \
   "commit and rollback statement test" "             "
 at_xfail=no
 (
-  $as_echo "10. $at_setup_line: testing $at_desc ..."
+  printf "%s\n" "10. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -4026,16 +4026,16 @@ cat >prog.cbl <<'_ATEOF'
       ******************************************************************
        WORKING-STORAGE             SECTION.
        01  TEST-DATA.
-         03 FILLER       PIC X(28) VALUE "0001ï¿½kï¿½Cï¿½@ï¿½ï¿½ï¿½Y          0400".
-         03 FILLER       PIC X(28) VALUE "0002ï¿½ÂXï¿½@ï¿½ï¿½ï¿½Y          0350".
-         03 FILLER       PIC X(28) VALUE "0003ï¿½Hï¿½cï¿½@ï¿½Oï¿½Y          0300".
-         03 FILLER       PIC X(28) VALUE "0004ï¿½ï¿½ï¿½@ï¿½lï¿½Y          025p".
-         03 FILLER       PIC X(28) VALUE "0005ï¿½{ï¿½ï¿½@ï¿½Ü˜Y          020p".
-         03 FILLER       PIC X(28) VALUE "0006ï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½Zï¿½Y          0150".
-         03 FILLER       PIC X(28) VALUE "0007ï¿½È–Ø@ï¿½ï¿½ï¿½Y          010p".
-         03 FILLER       PIC X(28) VALUE "0008ï¿½ï¿½ï¿½@ï¿½ï¿½ï¿½Y          0050".
-         03 FILLER       PIC X(28) VALUE "0009ï¿½Qï¿½nï¿½@ï¿½ï¿½Y          020p".
-         03 FILLER       PIC X(28) VALUE "0010ï¿½ï¿½Ê@ï¿½\ï¿½Y          0350".
+         03 FILLER       PIC X(28) VALUE "0001–kŠC@‘¾˜Y          0400".
+         03 FILLER       PIC X(28) VALUE "0002ÂX@Ÿ˜Y          0350".
+         03 FILLER       PIC X(28) VALUE "0003H“c@O˜Y          0300".
+         03 FILLER       PIC X(28) VALUE "0004Šâè@l˜Y          025p".
+         03 FILLER       PIC X(28) VALUE "0005‹{é@ŒÜ˜Y          020p".
+         03 FILLER       PIC X(28) VALUE "0006•Ÿ“‡@˜Z˜Y          0150".
+         03 FILLER       PIC X(28) VALUE "0007“È–Ø@µ˜Y          010p".
+         03 FILLER       PIC X(28) VALUE "0008ˆïé@”ª˜Y          0050".
+         03 FILLER       PIC X(28) VALUE "0009ŒQ”n@‹ã˜Y          020p".
+         03 FILLER       PIC X(28) VALUE "0010é‹Ê@\˜Y          0350".
 
 
        01  TEST-DATA-R   REDEFINES TEST-DATA.
@@ -4256,16 +4256,16 @@ $at_check_filter
 at_fn_diff_devnull "$at_stderr" || at_failed=:
 echo >>"$at_stdout"; printf "%s\n" "0001 <log> success test_return_code
 0002 <log> success test_return_code
-0003 <log> success fetch_record +0001, ï¿½kï¿½Cï¿½@ï¿½ï¿½ï¿½Y          , +0400
-0004 <log> success fetch_record +0002, ï¿½ÂXï¿½@ï¿½ï¿½ï¿½Y          , +0350
-0005 <log> success fetch_record +0003, ï¿½Hï¿½cï¿½@ï¿½Oï¿½Y          , +0300
-0006 <log> success fetch_record +0004, ï¿½ï¿½ï¿½@ï¿½lï¿½Y          , -0250
-0007 <log> success fetch_record +0005, ï¿½{ï¿½ï¿½@ï¿½Ü˜Y          , -0200
-0008 <log> success fetch_record +0006, ï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½Zï¿½Y          , +0150
-0009 <log> success fetch_record +0007, ï¿½È–Ø@ï¿½ï¿½ï¿½Y          , -0100
-0010 <log> success fetch_record +0008, ï¿½ï¿½ï¿½@ï¿½ï¿½ï¿½Y          , +0050
-0011 <log> success fetch_record +0009, ï¿½Qï¿½nï¿½@ï¿½ï¿½Y          , -0200
-0012 <log> success fetch_record +0010, ï¿½ï¿½Ê@ï¿½\\ï¿½Y          , +0350
+0003 <log> success fetch_record +0001, –kŠC@‘¾˜Y          , +0400
+0004 <log> success fetch_record +0002, ÂX@Ÿ˜Y          , +0350
+0005 <log> success fetch_record +0003, H“c@O˜Y          , +0300
+0006 <log> success fetch_record +0004, Šâè@l˜Y          , -0250
+0007 <log> success fetch_record +0005, ‹{é@ŒÜ˜Y          , -0200
+0008 <log> success fetch_record +0006, •Ÿ“‡@˜Z˜Y          , +0150
+0009 <log> success fetch_record +0007, “È–Ø@µ˜Y          , -0100
+0010 <log> success fetch_record +0008, ˆïé@”ª˜Y          , +0050
+0011 <log> success fetch_record +0009, ŒQ”n@‹ã˜Y          , -0200
+0012 <log> success fetch_record +0010, é‹Ê@\\˜Y          , +0350
 " | \
   $at_diff - "$at_stdout" || at_failed=:
 at_fn_check_status 0 $at_status "$at_srcdir/commit-rollback.at:195"
@@ -4283,7 +4283,7 @@ at_fn_group_banner 11 'select.at:1' \
   "select statement test" "                          "
 at_xfail=no
 (
-  $as_echo "11. $at_setup_line: testing $at_desc ..."
+  printf "%s\n" "11. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -4297,16 +4297,16 @@ cat >prog.cbl <<'_ATEOF'
       ******************************************************************
        WORKING-STORAGE             SECTION.
        01  TEST-DATA.
-         03 FILLER       PIC X(28) VALUE "0001ï¿½kï¿½Cï¿½@ï¿½ï¿½ï¿½Y          0400".
-         03 FILLER       PIC X(28) VALUE "0002ï¿½ÂXï¿½@ï¿½ï¿½ï¿½Y          0350".
-         03 FILLER       PIC X(28) VALUE "0003ï¿½Hï¿½cï¿½@ï¿½Oï¿½Y          0300".
-         03 FILLER       PIC X(28) VALUE "0004ï¿½ï¿½ï¿½@ï¿½lï¿½Y          025p".
-         03 FILLER       PIC X(28) VALUE "0005ï¿½{ï¿½ï¿½@ï¿½Ü˜Y          020p".
-         03 FILLER       PIC X(28) VALUE "0006ï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½Zï¿½Y          0150".
-         03 FILLER       PIC X(28) VALUE "0007ï¿½È–Ø@ï¿½ï¿½ï¿½Y          010p".
-         03 FILLER       PIC X(28) VALUE "0008ï¿½ï¿½ï¿½@ï¿½ï¿½ï¿½Y          0050".
-         03 FILLER       PIC X(28) VALUE "0009ï¿½Qï¿½nï¿½@ï¿½ï¿½Y          020p".
-         03 FILLER       PIC X(28) VALUE "0010ï¿½ï¿½Ê@ï¿½\ï¿½Y          0350".
+         03 FILLER       PIC X(28) VALUE "0001–kŠC@‘¾˜Y          0400".
+         03 FILLER       PIC X(28) VALUE "0002ÂX@Ÿ˜Y          0350".
+         03 FILLER       PIC X(28) VALUE "0003H“c@O˜Y          0300".
+         03 FILLER       PIC X(28) VALUE "0004Šâè@l˜Y          025p".
+         03 FILLER       PIC X(28) VALUE "0005‹{é@ŒÜ˜Y          020p".
+         03 FILLER       PIC X(28) VALUE "0006•Ÿ“‡@˜Z˜Y          0150".
+         03 FILLER       PIC X(28) VALUE "0007“È–Ø@µ˜Y          010p".
+         03 FILLER       PIC X(28) VALUE "0008ˆïé@”ª˜Y          0050".
+         03 FILLER       PIC X(28) VALUE "0009ŒQ”n@‹ã˜Y          020p".
+         03 FILLER       PIC X(28) VALUE "0010é‹Ê@\˜Y          0350".
 
        01  TEST-DATA-R   REDEFINES TEST-DATA.
          03  TEST-TBL    OCCURS  10.
@@ -4508,12 +4508,12 @@ at_status=$? at_failed=false
 $at_check_filter
 at_fn_diff_devnull "$at_stderr" || at_failed=:
 echo >>"$at_stdout"; printf "%s\n" "0001 <log> success test_return_code
-+0005, ï¿½{ï¿½ï¿½@ï¿½Ü˜Y          , -0200
-+0006, ï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½Zï¿½Y          , +0150
-+0007, ï¿½È–Ø@ï¿½ï¿½ï¿½Y          , -0100
-+0008, ï¿½ï¿½ï¿½@ï¿½ï¿½ï¿½Y          , +0050
-+0009, ï¿½Qï¿½nï¿½@ï¿½ï¿½Y          , -0200
-+0010, ï¿½ï¿½Ê@ï¿½\\ï¿½Y          , +0350
++0005, ‹{é@ŒÜ˜Y          , -0200
++0006, •Ÿ“‡@˜Z˜Y          , +0150
++0007, “È–Ø@µ˜Y          , -0100
++0008, ˆïé@”ª˜Y          , +0050
++0009, ŒQ”n@‹ã˜Y          , -0200
++0010, é‹Ê@\\˜Y          , +0350
 " | \
   $at_diff - "$at_stdout" || at_failed=:
 at_fn_check_status 0 $at_status "$at_srcdir/select.at:177"
@@ -4531,7 +4531,7 @@ at_fn_group_banner 12 'update.at:1' \
   "update statement test" "                          "
 at_xfail=no
 (
-  $as_echo "12. $at_setup_line: testing $at_desc ..."
+  printf "%s\n" "12. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -4545,16 +4545,16 @@ cat >prog.cbl <<'_ATEOF'
       ******************************************************************
        WORKING-STORAGE             SECTION.
        01  TEST-DATA.
-         03 FILLER       PIC X(28) VALUE "0001ï¿½kï¿½Cï¿½@ï¿½ï¿½ï¿½Y          0400".
-         03 FILLER       PIC X(28) VALUE "0002ï¿½ÂXï¿½@ï¿½ï¿½ï¿½Y          0350".
-         03 FILLER       PIC X(28) VALUE "0003ï¿½Hï¿½cï¿½@ï¿½Oï¿½Y          0300".
-         03 FILLER       PIC X(28) VALUE "0004ï¿½ï¿½ï¿½@ï¿½lï¿½Y          025p".
-         03 FILLER       PIC X(28) VALUE "0005ï¿½{ï¿½ï¿½@ï¿½Ü˜Y          020p".
-         03 FILLER       PIC X(28) VALUE "0006ï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½Zï¿½Y          0150".
-         03 FILLER       PIC X(28) VALUE "0007ï¿½È–Ø@ï¿½ï¿½ï¿½Y          010p".
-         03 FILLER       PIC X(28) VALUE "0008ï¿½ï¿½ï¿½@ï¿½ï¿½ï¿½Y          0050".
-         03 FILLER       PIC X(28) VALUE "0009ï¿½Qï¿½nï¿½@ï¿½ï¿½Y          020p".
-         03 FILLER       PIC X(28) VALUE "0010ï¿½ï¿½Ê@ï¿½\ï¿½Y          0350".
+         03 FILLER       PIC X(28) VALUE "0001–kŠC@‘¾˜Y          0400".
+         03 FILLER       PIC X(28) VALUE "0002ÂX@Ÿ˜Y          0350".
+         03 FILLER       PIC X(28) VALUE "0003H“c@O˜Y          0300".
+         03 FILLER       PIC X(28) VALUE "0004Šâè@l˜Y          025p".
+         03 FILLER       PIC X(28) VALUE "0005‹{é@ŒÜ˜Y          020p".
+         03 FILLER       PIC X(28) VALUE "0006•Ÿ“‡@˜Z˜Y          0150".
+         03 FILLER       PIC X(28) VALUE "0007“È–Ø@µ˜Y          010p".
+         03 FILLER       PIC X(28) VALUE "0008ˆïé@”ª˜Y          0050".
+         03 FILLER       PIC X(28) VALUE "0009ŒQ”n@‹ã˜Y          020p".
+         03 FILLER       PIC X(28) VALUE "0010é‹Ê@\˜Y          0350".
 
        01  TEST-DATA-R   REDEFINES TEST-DATA.
          03  TEST-TBL    OCCURS  10.
@@ -4763,11 +4763,11 @@ at_status=$? at_failed=false
 $at_check_filter
 at_fn_diff_devnull "$at_stderr" || at_failed=:
 echo >>"$at_stdout"; printf "%s\n" "0001 <log> success test_return_code
-0002 <log> success fetch_record +0001, ï¿½kï¿½Cï¿½@ï¿½ï¿½ï¿½Y          , +0400
-0003 <log> success fetch_record +0002, ï¿½ÂXï¿½@ï¿½ï¿½ï¿½Y          , +0350
-0004 <log> success fetch_record +0003, ï¿½Hï¿½cï¿½@ï¿½Oï¿½Y          , +0300
-0005 <log> success fetch_record +0004, ï¿½ï¿½ï¿½@ï¿½lï¿½Y          , -0250
-0006 <log> success fetch_record +0005, ï¿½{ï¿½ï¿½@ï¿½Ü˜Y          , -0200
+0002 <log> success fetch_record +0001, –kŠC@‘¾˜Y          , +0400
+0003 <log> success fetch_record +0002, ÂX@Ÿ˜Y          , +0350
+0004 <log> success fetch_record +0003, H“c@O˜Y          , +0300
+0005 <log> success fetch_record +0004, Šâè@l˜Y          , -0250
+0006 <log> success fetch_record +0005, ‹{é@ŒÜ˜Y          , -0200
 0007 <log> success fetch_record +0006, NO_NAME             , +0150
 0008 <log> success fetch_record +0007, NO_NAME             , -0100
 0009 <log> success fetch_record +0008, NO_NAME             , +0050
@@ -4790,7 +4790,7 @@ at_fn_group_banner 13 'include.at:1' \
   "use include variable" "                           "
 at_xfail=no
 (
-  $as_echo "13. $at_setup_line: testing $at_desc ..."
+  printf "%s\n" "13. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -4929,7 +4929,7 @@ at_fn_group_banner 14 'include.at:100' \
   "use include variable with gropu insert" "         "
 at_xfail=no
 (
-  $as_echo "14. $at_setup_line: testing $at_desc ..."
+  printf "%s\n" "14. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
